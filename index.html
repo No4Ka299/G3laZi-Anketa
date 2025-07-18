@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G3laZi Media Team - Присоединяйся к нам!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .checkbox-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .radio-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .radio-item input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 30px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .form-container {
+                padding: 20px;
+            }
+            
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+            }
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .success-message {
+            display: none;
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>G3laZi Media Team</h1>
+            <p>Присоединяйся к нашей команде CS2 медиа!</p>
+        </div>
+
+        <div class="form-container">
+            <form id="recruitmentForm">
+                <!-- Секция I: Общая информация -->
+                <div class="section">
+                    <h2 class="section-title">Общая информация и контактные данные</h2>
+                    
+                    <div class="form-group">
+                        <label for="fullName">Ваше полное имя/ФИО: *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nickname">Ваш основной никнейм (в играх, Discord): *</label>
+                        <input type="text" id="nickname" name="nickname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telegram">Ваш Telegram-аккаунт для связи: *</label>
+                        <input type="text" id="telegram" name="telegram" placeholder="@ваш_никнейм" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="discord">Ваш Discord-никнейм и тег: *</label>
+                        <input type="text" id="discord" name="discord" placeholder="User#1234" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Ваш возраст: *</label>
+                        <input type="number" id="age" name="age" min="12" max="50" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Ваш город и часовой пояс: *</label>
+                        <input type="text" id="location" name="location" placeholder="Москва, UTC+3" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="steamProfile">Ссылка на ваш профиль Steam: *</label>
+                        <input type="url" id="steamProfile" name="steamProfile" placeholder="https://steamcommunity.com/..." required>
+                    </div>
+                </div>
+
+                <!-- Секция II: Опыт и навыки в CS2 -->
+                <div class="section">
+                    <h2 class="section-title">Опыт и навыки в CS2</h2>
+                    
+                    <div class="form-group">
+                        <label for="rank">Ваше текущее звание в CS2: *</label>
+                        <input type="text" id="rank" name="rank" placeholder="Глобал, Мастер-Хранитель 1, 20000 Premier" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hours">Сколько часов вы наиграли в CS2/CS:GO: *</label>
+                        <input type="number" id="hours" name="hours" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ваши предпочитаемые игровые роли:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="rifler" name="roles" value="rifler">
+                                <label for="rifler">Рифлер (Открывающий/Опорник)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="awper" name="roles" value="awper">
+                                <label for="awper">AWPer (Снайпер)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lurker" name="roles" value="lurker">
+                                <label for="lurker">Люкер (Lurker)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="igl" name="roles" value="igl">
+                                <label for="igl">Капитан/IGL (In-Game Leader)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="support" name="roles" value="support">
+                                <label for="support">Саппорт (Поддержка)</label>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-top: 15px;">
+                            <input type="text" id="otherRole" name="otherRole" placeholder="Другое (укажите):">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="teamExperience">Опыт участия в командах/турнирах:</label>
+                        <textarea id="teamExperience" name="teamExperience" placeholder="Опишите ваш опыт..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gameGoals">Ваши игровые цели в CS2: *</label>
+                        <textarea id="gameGoals" name="gameGoals" placeholder="Например, достичь определенного рейтинга, играть на турнирах..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="strengths">Ваши сильные и слабые стороны: *</label>
+                        <textarea id="strengths" name="strengths" placeholder="Назовите 3 сильные стороны и 3 слабые стороны..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="trainingTime">Готовность к тренировкам: *</label>
+                        <textarea id="trainingTime" name="trainingTime" placeholder="Как часто и по сколько часов готовы тренироваться?" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="platforms">Ссылки на профили (Faceit, ESEA и т.п.):</label>
+                        <textarea id="platforms" name="platforms" placeholder="Укажите ссылки на ваши профили на других платформах..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Секция III: Медиа опыт -->
+                <div class="section">
+                    <h2 class="section-title">Опыт в медиа и контенте</h2>
+                    
+                    <div class="form-group">
+                        <label>Ваш опыт в медиа-областях:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="streaming" name="mediaExperience" value="streaming">
+                                <label for="streaming">Стриминг (Twitch, YouTube, VK Play)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="videoEditing" name="mediaExperience" value="videoEditing">
+                                <label for="videoEditing">Монтаж видео</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="design" name="mediaExperience" value="design">
+                                <label for="design">Графический дизайн</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="audio" name="mediaExperience" value="audio">
+                                <label for="audio">Работа со звуком/подкасты</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="writing" name="mediaExperience" value="writing">
+                                <label for="writing">Написание текстов</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="smm" name="mediaExperience" value="smm">
+                                <label for="smm">SMM/Продвижение</label>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-top: 15px;">
+                            <input type="text" id="otherMedia" name="otherMedia" placeholder="Другое (укажите):">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="software">Программы, которыми владеете:</label>
+                        <textarea id="software" name="software" placeholder="Adobe Premiere Pro, Photoshop, Davinci Resolve, OBS, Figma и т.д."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="portfolio">Портфолио или примеры работ:</label>
+                        <textarea id="portfolio" name="portfolio" placeholder="Приложите ссылки на ваши работы..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contentInterest">Какой контент вам интересно создавать: *</label>
+                        <textarea id="contentInterest" name="contentInterest" placeholder="Опишите, что вам было бы интересно создавать..." required></textarea>
+                    </div>
+                </div>
+
+                <!-- Секция IV: Мотивация -->
+                <div class="section">
+                    <h2 class="section-title">Мотивация и командная работа</h2>
+                    
+                    <div class="form-group">
+                        <label for="whyJoin">Почему хотите присоединиться к G3laZi Media Team: *</label>
+                        <textarea id="whyJoin" name="whyJoin" placeholder="Что вас привлекло в нашей команде?" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contribution">Что вы можете привнести в команду: *</label>
+                        <textarea id="contribution" name="contribution" placeholder="Опишите ваш потенциальный вклад..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="criticism">Отношение к критике и решение конфликтов: *</label>
+                        <textarea id="criticism" name="criticism" placeholder="Как вы относитесь к конструктивной критике и решаете конфликты?" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expectations">Ваши ожидания от участия в команде: *</label>
+                        <textarea id="expectations" name="expectations" placeholder="Каковы ваши основные ожидания?" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="termsAgreement">Ознакомлены ли вы с условиями участия: *</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="termsYes" name="termsAgreement" value="yes" required>
+                                <label for="termsYes">Да, ознакомлен/а</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="termsNo" name="termsAgreement" value="no" required>
+                                <label for="termsNo">Нет, но готов/а ознакомиться</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rulesAgreement">Готовы ли соблюдать правила Discord-сервера: *</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="rulesYes" name="rulesAgreement" value="yes" required>
+                                <label for="rulesYes">Да</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="rulesNo" name="rulesAgreement" value="no" required>
+                                <label for="rulesNo">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Секция V: Дополнительная информация -->
+                <div class="section">
+                    <h2 class="section-title">Дополнительная информация</h2>
+                    
+                    <div class="form-group">
+                        <label for="questions">Есть ли у вас вопросы к нам:</label>
+                        <textarea id="questions" name="questions" placeholder="Задайте ваши вопросы о команде..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="additional">Что ещё важно о вас знать:</label>
+                        <textarea id="additional" name="additional" placeholder="Расскажите о себе дополнительно..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Отправить заявку</button>
+                
+                <div class="loading" id="loading">
+                    <p>Отправляем вашу заявку...</p>
+                </div>
+                
+                <div class="success-message" id="successMessage">
+                    <h3>Спасибо за вашу заявку!</h3>
+                    <p>Мы получили вашу анкету и свяжемся с вами в ближайшее время.</p>
+                </div>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>Благодарим вас за уделенное время и интерес к G3laZi Media Team!</p>
+            <p>Мы свяжемся с вами после рассмотрения вашей анкеты.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('recruitmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const loading = document.getElementById('loading');
+            const successMessage = document.getElementById('successMessage');
+            const submitBtn = document.querySelector('.submit-btn');
+            
+            loading.classList.add('show');
+            submitBtn.disabled = true;
+            
+            // Собираем данные формы
+            const formData = new FormData(this);
+            const data = {};
+            
+            // Обработка обычных полей
+            for (let [key, value] of formData.entries()) {
+                if (key === 'roles' || key === 'mediaExperience') {
+                    if (!data[key]) data[key] = [];
+                    data[key].push(value);
+                } else {
+                    data[key] = value;
+                }
+            }
+            
+            // Преобразуем массивы в строки
+            if (data.roles) data.roles = data.roles.join(', ');
+            if (data.mediaExperience) data.mediaExperience = data.mediaExperience.join(', ');
+            
+            // Формируем текст письма
+            const emailBody = formatEmailBody(data);
+            
+            // Используем mailto для отправки
+            const subject = encodeURIComponent('Заявка в G3laZi Media Team - ' + data.fullName);
+            const body = encodeURIComponent(emailBody);
+            const mailtoLink = `mailto:efimov15042006@gmail.com?subject=${subject}&body=${body}`;
+            
+            // Открываем почтовый клиент
+            window.location.href = mailtoLink;
+            
+            // Симулируем отправку
+            setTimeout(() => {
+                loading.classList.remove('show');
+                successMessage.classList.add('show');
+                submitBtn.disabled = false;
+                this.reset();
+            }, 2000);
+        });
+        
+        function formatEmailBody(data) {
+            let body = `ЗАЯВКА В G3laZi Media Team\n\n`;
+            
+            body += `═══════════════════════════════════════\n`;
+            body += `I. ОБЩАЯ ИНФОРМАЦИЯ\n`;
+            body += `═══════════════════════════════════════\n`;
+            body += `Полное имя: ${data.fullName}\n`;
+            body += `Никнейм: ${data.nickname}\n`;
+            body += `Telegram: ${data.telegram}\n`;
+            body += `Discord: ${data.discord}\n`;
+            body += `Возраст: ${data.age}\n`;
+            body += `Город/Часовой пояс: ${data.location}\n`;
+            body += `Steam профиль: ${data.steamProfile}\n\n`;
+            
+            body += `═══════════════════════════════════════\n`;
+            body += `II. ОПЫТ И НАВЫКИ В CS2\n`;
+            body += `═══════════════════════════════════════\n`;
+            body += `Звание: ${data.rank}\n`;
+            body += `Часы в игре: ${data.hours}\n`;
+            body += `Роли: ${data.roles || 'Не указано'}\n`;
+            if (data.otherRole) body += `Другая роль: ${data.otherRole}\n`;
+            body += `Опыт в командах: ${data.teamExperience || 'Нет опыта'}\n`;
+            body += `Игровые цели: ${data.gameGoals}\n`;
+            body += `Сильные/слабые стороны: ${data.strengths}\n`;
+            body += `Готовность к тренировкам: ${data.trainingTime}\n`;
+            body += `Другие платформы: ${data.platforms || 'Не указано'}\n\n`;
+            
+            body += `═══════════════════════════════════════\n`;
+            body += `III. МЕДИА ОПЫТ\n`;
+            body += `═══════════════════════════════════════\n`;
+            body += `Медиа опыт: ${data.mediaExperience || 'Нет опыта'}\n`;
+            if (data.otherMedia) body += `Другой медиа опыт: ${data.otherMedia}\n`;
+            body += `Программы: ${data.software || 'Не указано'}\n`;
+            body += `Портфолио: ${data.portfolio || 'Не указано'}\n`;
+            body += `Интересный контент: ${data.contentInterest}\n\n`;
+            
+            body += `═══════════════════════════════════════\n`;
+            body += `IV. МОТИВАЦИЯ И КОМАНДНАЯ РАБОТА\n`;
+            body += `═══════════════════════════════════════\n`;
+            body += `Почему G3laZi: ${data.whyJoin}\n`;
+            body += `Вклад в команду: ${data.contribution}\n`;
+            body += `Отношение к критике: ${data.criticism}\n`;
+            body += `Ожидания: ${data.expectations}\n`;
+            body += `Ознакомлен с условиями: ${data.termsAgreement === 'yes' ? 'Да' : 'Нет, но готов ознакомиться'}\n`;
+            body += `Готов соблюдать правила: ${data.rulesAgreement === 'yes' ? 'Да' : 'Нет'}\n\n`;
+            
+            body += `═══════════════════════════════════════\n`;
+            body += `V. ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ\n`;
+            body += `═══════════════════════════════════════\n`;
+            body += `Вопросы: ${data.questions || 'Нет вопросов'}\n`;
+            body += `Дополнительно: ${data.additional || 'Нет дополнительной информации'}\n\n`;
+            
+            body += `═══════════════════════════════════════\n`;
+            body += `Дата подачи заявки: ${new Date().toLocaleString('ru-RU')}\n`;
+            body += `═══════════════════════════════════════\n`;
+            
+            return body;
+        }
+    </script>
+</body>
+</html>
