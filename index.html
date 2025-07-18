@@ -258,44 +258,50 @@
         </div>
 
         <div class="form-container">
-            <form id="recruitmentForm">
+            <form id="recruitmentForm" action="https://formsubmit.co/efimov15042006@gmail.com" method="POST">
+                <!-- Скрытые поля для настройки FormSubmit -->
+                <input type="hidden" name="_subject" value="Новая заявка в G3laZi Media Team">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://claude.ai/chat">
+                
                 <!-- Секция I: Общая информация -->
                 <div class="section">
                     <h2 class="section-title">Общая информация и контактные данные</h2>
                     
                     <div class="form-group">
                         <label for="fullName">Ваше полное имя/ФИО: *</label>
-                        <input type="text" id="fullName" name="fullName" required>
+                        <input type="text" id="fullName" name="Полное_имя" required>
                     </div>
 
                     <div class="form-group">
                         <label for="nickname">Ваш основной никнейм (в играх, Discord): *</label>
-                        <input type="text" id="nickname" name="nickname" required>
+                        <input type="text" id="nickname" name="Никнейм" required>
                     </div>
 
                     <div class="form-group">
                         <label for="telegram">Ваш Telegram-аккаунт для связи: *</label>
-                        <input type="text" id="telegram" name="telegram" placeholder="@ваш_никнейм" required>
+                        <input type="text" id="telegram" name="Telegram" placeholder="@ваш_никнейм" required>
                     </div>
 
                     <div class="form-group">
                         <label for="discord">Ваш Discord-никнейм и тег: *</label>
-                        <input type="text" id="discord" name="discord" placeholder="User#1234" required>
+                        <input type="text" id="discord" name="Discord" placeholder="User#1234" required>
                     </div>
 
                     <div class="form-group">
                         <label for="age">Ваш возраст: *</label>
-                        <input type="number" id="age" name="age" min="12" max="50" required>
+                        <input type="number" id="age" name="Возраст" min="12" max="50" required>
                     </div>
 
                     <div class="form-group">
                         <label for="location">Ваш город и часовой пояс: *</label>
-                        <input type="text" id="location" name="location" placeholder="Москва, UTC+3" required>
+                        <input type="text" id="location" name="Город_часовой_пояс" placeholder="Москва, UTC+3" required>
                     </div>
 
                     <div class="form-group">
                         <label for="steamProfile">Ссылка на ваш профиль Steam: *</label>
-                        <input type="url" id="steamProfile" name="steamProfile" placeholder="https://steamcommunity.com/..." required>
+                        <input type="url" id="steamProfile" name="Steam_профиль" placeholder="https://steamcommunity.com/..." required>
                     </div>
                 </div>
 
@@ -305,66 +311,66 @@
                     
                     <div class="form-group">
                         <label for="rank">Ваше текущее звание в CS2: *</label>
-                        <input type="text" id="rank" name="rank" placeholder="Глобал, Мастер-Хранитель 1, 20000 Premier" required>
+                        <input type="text" id="rank" name="Звание_в_CS2" placeholder="Глобал, Мастер-Хранитель 1, 20000 Premier" required>
                     </div>
 
                     <div class="form-group">
                         <label for="hours">Сколько часов вы наиграли в CS2/CS:GO: *</label>
-                        <input type="number" id="hours" name="hours" min="0" required>
+                        <input type="number" id="hours" name="Часы_в_игре" min="0" required>
                     </div>
 
                     <div class="form-group">
                         <label>Ваши предпочитаемые игровые роли:</label>
                         <div class="checkbox-group">
                             <div class="checkbox-item">
-                                <input type="checkbox" id="rifler" name="roles" value="rifler">
+                                <input type="checkbox" id="rifler" name="Роли" value="Рифлер">
                                 <label for="rifler">Рифлер (Открывающий/Опорник)</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="awper" name="roles" value="awper">
+                                <input type="checkbox" id="awper" name="Роли" value="AWPer">
                                 <label for="awper">AWPer (Снайпер)</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="lurker" name="roles" value="lurker">
+                                <input type="checkbox" id="lurker" name="Роли" value="Люкер">
                                 <label for="lurker">Люкер (Lurker)</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="igl" name="roles" value="igl">
+                                <input type="checkbox" id="igl" name="Роли" value="IGL">
                                 <label for="igl">Капитан/IGL (In-Game Leader)</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="support" name="roles" value="support">
+                                <input type="checkbox" id="support" name="Роли" value="Саппорт">
                                 <label for="support">Саппорт (Поддержка)</label>
                             </div>
                         </div>
                         <div class="form-group" style="margin-top: 15px;">
-                            <input type="text" id="otherRole" name="otherRole" placeholder="Другое (укажите):">
+                            <input type="text" id="otherRole" name="Другая_роль" placeholder="Другое (укажите):">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="teamExperience">Опыт участия в командах/турнирах:</label>
-                        <textarea id="teamExperience" name="teamExperience" placeholder="Опишите ваш опыт..."></textarea>
+                        <textarea id="teamExperience" name="Опыт_в_командах" placeholder="Опишите ваш опыт..."></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="gameGoals">Ваши игровые цели в CS2: *</label>
-                        <textarea id="gameGoals" name="gameGoals" placeholder="Например, достичь определенного рейтинга, играть на турнирах..." required></textarea>
+                        <textarea id="gameGoals" name="Игровые_цели" placeholder="Например, достичь определенного рейтинга, играть на турнирах..." required></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="strengths">Ваши сильные и слабые стороны: *</label>
-                        <textarea id="strengths" name="strengths" placeholder="Назовите 3 сильные стороны и 3 слабые стороны..." required></textarea>
+                        <textarea id="strengths" name="Сильные_слабые_стороны" placeholder="Назовите 3 сильные стороны и 3 слабые стороны..." required></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="trainingTime">Готовность к тренировкам: *</label>
-                        <textarea id="trainingTime" name="trainingTime" placeholder="Как часто и по сколько часов готовы тренироваться?" required></textarea>
+                        <textarea id="trainingTime" name="Готовность_к_тренировкам" placeholder="Как часто и по сколько часов готовы тренироваться?" required></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="platforms">Ссылки на профили (Faceit, ESEA и т.п.):</label>
-                        <textarea id="platforms" name="platforms" placeholder="Укажите ссылки на ваши профили на других платформах..."></textarea>
+                        <textarea id="platforms" name="Другие_платформы" placeholder="Укажите ссылки на ваши профили на других платформах..."></textarea>
                     </div>
                 </div>
 
@@ -376,52 +382,131 @@
                         <label>Ваш опыт в медиа-областях:</label>
                         <div class="checkbox-group">
                             <div class="checkbox-item">
-                                <input type="checkbox" id="streaming" name="mediaExperience" value="streaming">
+                                <input type="checkbox" id="streaming" name="Медиа_опыт" value="Стриминг">
                                 <label for="streaming">Стриминг (Twitch, YouTube, VK Play)</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="videoEditing" name="mediaExperience" value="videoEditing">
+                                <input type="checkbox" id="videoEditing" name="Медиа_опыт" value="Монтаж видео">
                                 <label for="videoEditing">Монтаж видео</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="design" name="mediaExperience" value="design">
+                                <input type="checkbox" id="design" name="Медиа_опыт" value="Графический дизайн">
                                 <label for="design">Графический дизайн</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="audio" name="mediaExperience" value="audio">
+                                <input type="checkbox" id="audio" name="Медиа_опыт" value="Работа со звуком">
                                 <label for="audio">Работа со звуком/подкасты</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="writing" name="mediaExperience" value="writing">
+                                <input type="checkbox" id="writing" name="Медиа_опыт" value="Написание текстов">
                                 <label for="writing">Написание текстов</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="smm" name="mediaExperience" value="smm">
+                                <input type="checkbox" id="smm" name="Медиа_опыт" value="SMM">
                                 <label for="smm">SMM/Продвижение</label>
                             </div>
                         </div>
                         <div class="form-group" style="margin-top: 15px;">
-                            <input type="text" id="otherMedia" name="otherMedia" placeholder="Другое (укажите):">
+                            <input type="text" id="otherMedia" name="Другой_медиа_опыт" placeholder="Другое (укажите):">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="software">Программы, которыми владеете:</label>
-                        <textarea id="software" name="software" placeholder="Adobe Premiere Pro, Photoshop, Davinci Resolve, OBS, Figma и т.д."></textarea>
+                        <textarea id="software" name="Программы" placeholder="Adobe Premiere Pro, Photoshop, Davinci Resolve, OBS, Figma и т.д."></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="portfolio">Портфолио или примеры работ:</label>
-                        <textarea id="portfolio" name="portfolio" placeholder="Приложите ссылки на ваши работы..."></textarea>
+                        <textarea id="portfolio" name="Портфолио" placeholder="Приложите ссылки на ваши работы..."></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="contentInterest">Какой контент вам интересно создавать: *</label>
-                        <textarea id="contentInterest" name="contentInterest" placeholder="Опишите, что вам было бы интересно создавать..." required></textarea>
+                        <textarea id="contentInterest" name="Интересный_контент" placeholder="Опишите, что вам было бы интересно создавать..." required></textarea>
                     </div>
                 </div>
 
                 <!-- Секция IV: Мотивация -->
+                <div class="section">
+                    <h2 class="section-title">Мотивация и командная работа</h2>
+                    
+                    <div class="form-group">
+                        <label for="whyJoin">Почему хотите присоединиться к G3laZi Media Team: *</label>
+                        <textarea id="whyJoin" name="Почему_G3laZi" placeholder="Что вас привлекло в нашей команде?" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contribution">Что вы можете привнести в команду: *</label>
+                        <textarea id="contribution" name="Вклад_в_команду" placeholder="Опишите ваш потенциальный вклад..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="criticism">Отношение к критике и решение конфликтов: *</label>
+                        <textarea id="criticism" name="Отношение_к_критике" placeholder="Как вы относитесь к конструктивной критике и решаете конфликты?" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expectations">Ваши ожидания от участия в команде: *</label>
+                        <textarea id="expectations" name="Ожидания" placeholder="Каковы ваши основные ожидания?" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="termsAgreement">Ознакомлены ли вы с условиями участия: *</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="termsYes" name="Ознакомлен_с_условиями" value="Да, ознакомлен/а" required>
+                                <label for="termsYes">Да, ознакомлен/а</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="termsNo" name="Ознакомлен_с_условиями" value="Нет, но готов/а ознакомиться" required>
+                                <label for="termsNo">Нет, но готов/а ознакомиться</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rulesAgreement">Готовы ли соблюдать правила Discord-сервера: *</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="rulesYes" name="Готов_соблюдать_правила" value="Да" required>
+                                <label for="rulesYes">Да</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="rulesNo" name="Готов_соблюдать_правила" value="Нет" required>
+                                <label for="rulesNo">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Секция V: Дополнительная информация -->
+                <div class="section">
+                    <h2 class="section-title">Дополнительная информация</h2>
+                    
+                    <div class="form-group">
+                        <label for="questions">Есть ли у вас вопросы к нам:</label>
+                        <textarea id="questions" name="Вопросы" placeholder="Задайте ваши вопросы о команде..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="additional">Что ещё важно о вас знать:</label>
+                        <textarea id="additional" name="Дополнительно" placeholder="Расскажите о себе дополнительно..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Отправить заявку</button>
+                
+                <div class="loading" id="loading">
+                    <p>Отправляем вашу заявку...</p>
+                </div>
+                
+                <div class="success-message" id="successMessage">
+                    <h3>Спасибо за вашу заявку!</h3>
+                    <p>Мы получили вашу анкету и свяжемся с вами в ближайшее время.</p>
+                </div>
+            </form>
+        </div> Секция IV: Мотивация -->
                 <div class="section">
                     <h2 class="section-title">Мотивация и командная работа</h2>
                     
@@ -540,22 +625,43 @@
             // Формируем текст письма
             const emailBody = formatEmailBody(data);
             
-            // Используем mailto для отправки
-            const subject = encodeURIComponent('Заявка в G3laZi Media Team - ' + data.fullName);
-            const body = encodeURIComponent(emailBody);
-            const mailtoLink = `mailto:efimov15042006@gmail.com?subject=${subject}&body=${body}`;
-            
-            // Открываем почтовый клиент
-            window.location.href = mailtoLink;
-            
-            // Симулируем отправку
-            setTimeout(() => {
-                loading.classList.remove('show');
-                successMessage.classList.add('show');
-                submitBtn.disabled = false;
-                this.reset();
-            }, 2000);
+            // Отправляем через EmailJS
+            sendEmail(data, emailBody)
+                .then(() => {
+                    loading.classList.remove('show');
+                    successMessage.classList.add('show');
+                    submitBtn.disabled = false;
+                    this.reset();
+                })
+                .catch((error) => {
+                    loading.classList.remove('show');
+                    alert('Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз или свяжитесь с нами напрямую.');
+                    submitBtn.disabled = false;
+                });
         });
+        
+        async function sendEmail(data, emailBody) {
+            // Используем Formspree для отправки
+            const response = await fetch('https://formspree.io/f/xdkogpvw', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: data.fullName,
+                    email: data.telegram, // используем telegram как контакт
+                    subject: `Заявка в G3laZi Media Team - ${data.fullName}`,
+                    message: emailBody,
+                    _replyto: 'efimov15042006@gmail.com'
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error('Ошибка отправки');
+            }
+            
+            return response.json();
+        }
         
         function formatEmailBody(data) {
             let body = `ЗАЯВКА В G3laZi Media Team\n\n`;
